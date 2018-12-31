@@ -9,7 +9,7 @@ import   Header  from './src/components/header';
 
 // Create Component
 const App = () => (
-    <Header />
+    <Header headerText={'Squaaad Goals'} />
 );
   
 
