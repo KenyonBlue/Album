@@ -4,12 +4,16 @@ import Card from './Card';
 import CardSection from './CardSection';
 
 const AlbumDetail = ({ album }) => {
-const {artist , title, thumbnail_image} = album;
+const {artist , title, thumbnail_image, image} = album;
+
 const {thumbnailStyle , 
     headerContentStyle, 
     thumbnailContainerStyle,
-    headerTextStyle
+    headerTextStyle,
+    imageStyle
 } = styles;
+
+
 
     return (
         <Card>
@@ -28,6 +32,14 @@ const {thumbnailStyle ,
             </Text>
             <Text>{artist}</Text>
             </View>
+            </CardSection>
+
+           
+            <CardSection>
+            <Image  
+                style={ imageStyle }
+                source={{ uri: image  }} 
+                />
             </CardSection>
         </Card>
     );
@@ -52,6 +64,12 @@ const styles ={
         alignItems: 'center',
         marginLeft: 10,
         marginRight: 10,
+    },
+
+    imageStyle: {
+        height: 300,
+        flex: 1,
+        width: null
     }
 };
 
